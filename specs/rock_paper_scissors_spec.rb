@@ -18,7 +18,7 @@ class RockPaperScissorsSpec < MiniTest::Test
   def test_left_hand_scissors_right_hand_scissors()
     game = RockPaperScissors.new("scissors", "scissors")
     gameplay =game.play()
-    assert_equal("Both players played SCISSORS - tie!", gameplay)
+    assert_equal("Both hands played SCISSORS - tie!", gameplay)
   end
 
 end

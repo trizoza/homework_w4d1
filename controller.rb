@@ -1,12 +1,6 @@
 require ('sinatra')
-require ('sinatra/contrib/all')
+require ('sinatra/contrib/all') if development?
 require_relative ('models/rock_paper_scissors')
-
-get '/:left/:right' do
-  game = RockPaperScissors.new(params[:left], params[:right])
-  @result = game.play()
-  erb(:result)
-end
 
 get '/' do
   erb(:home)
